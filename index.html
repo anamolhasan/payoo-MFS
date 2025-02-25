@@ -11,14 +11,14 @@
     <section class="max-w-md  min-h-screen mx-auto bg-gray-200 py-6">
         <header>
            <nav class="flex justify-center items-center">
-             <div class="mt-10 relative flex justify-center items-center w-9/12 mb-10">
+             <div class="mt-14 relative flex justify-center items-center w-9/12 mb-10">
                  <img class="w-48 absolute" src="./assets/bg.png" alt="">
                  <img class="w-16" src="./assets/Group.png" alt="">
              </div>
            </nav>
         </header>
         <!-- login section -->
-        <div class="hero bg-base-200 ">
+        <div class=" ">
             <div class="hero-content flex-col lg:flex-row-reverse">
             
               <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -27,24 +27,26 @@
                     <label class="label">
                       <span class="label-text">Acount number</span>
                     </label>
-                    <input type="number" placeholder="Type your number" class="input input-bordered" required />
+                    <input value="01301301301" id="Acount-number" type="number" placeholder="Type your number" class="input input-bordered" required />
                   </div>
                   <div class="form-control">
                     <label class="label">
                       <span class="label-text">PIN</span>
                     </label>
-                    <input type="text" placeholder="Type your PIN" class="input input-bordered" required />
+                    <input value="1234" id="pin" type="text" placeholder="Type your PIN" class="input input-bordered" required />
                     <label class="label">
                       <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                     </label>
                   </div>
                   <div class="form-control mt-6">
-                    <button class="btn btn-primary">Login</button>
+                    <button id="login-btn"  class="btn btn-primary">Login</button>
                   </div>
                 </form>
               </div>
             </div>
           </div>
     </section>
+
+    <script src="./script/login.js"></script>
 </body>
 </html>
