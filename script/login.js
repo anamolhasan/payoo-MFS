@@ -1,23 +1,18 @@
+document.getElementById('login-btn').addEventListener('click', (event) => {
+  event.preventDefault();
 
-// stap 1
-document.getElementById('login-btn').addEventListener('click', function(event){
-  event.preventDefault()
-   
-  const acountNumber = document.getElementById('Acount-number').value
-  const pin = document.getElementById('pin').value
-  const convertedPin = parseInt(pin)
-  if(acountNumber.length === 11){
-    console.log(typeof pin)
-       if(convertedPin === 1234){
-         window.location.href='./main.html'
-       }
-       else{
-        alert('pin tikh nai')
-       }
+  const accountNumber = document.getElementById('acount-number').value;
+  const pin = document.getElementById('pin').value;
+  const pinNumber = Number(pin); // parseInt() এর বদলে Number() ব্যবহার করেছি
+
+  if (accountNumber.length === 11) {
+    if (pinNumber === 1234) {
+      window.location.href="./main.html"
+        alert('✅ লগইন সফল: Okay, ঠিক আছে!');
+    } else {
+      alert('❌ ভুল পিন: Pin ঠিক নেই');
+    }
+  } else {
+    alert('❌ ভুল অ্যাকাউন্ট নম্বর: ঠিক নেই');
   }
-  else{
-    alert('need valid acount number')
-  }
-
-
-})
+});
