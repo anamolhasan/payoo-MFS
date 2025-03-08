@@ -20,17 +20,16 @@
                 </div>
                  <button class="btn">logout</button>
              </nav>
-
              <section class="mt-10">
                 <h1 class="text-2xl font-bold mb-2">🔥 Welcome to Payooo!</h1>
                 <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
 
                 <div class="cards  grid grid-cols-3 mt-14 gap-2 p-2">
-                      <div class="box border p-4 text-center rounded-sm">
+                      <div id="add-money-box" class="box border p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="">
                         <h3>Add Money</h3>
                     </div>
-                      <div class="box border p-4 text-center rounded-sm">
+                      <div id="cash-out-box" class="box border p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/send1.png" alt="">
                         <h3>Cashout</h3>
                     </div>
@@ -52,7 +51,8 @@
                     </div>
                 </div>
 
-                <section>
+                <!-- Add Money section -->
+                <section id="add-moneys">
                   <h2 class="text-2xl font-bold text-blue-800">Add Mony</h2>
 
                   <div class="">
@@ -82,9 +82,38 @@
                     </div>
                   </div>
                 </section>
+
+                <!-- Cash Out section -->
+                <section id="cash-out">
+                  <h2 class="text-2xl font-bold text-blue-800 text-center">Cash Out</h2>
+
+                  <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                     
+                      <div class="card  w-full max-w-sm shrink-0 ">
+                        <div class="card-body">
+                          
+                          <fieldset class="fieldset">
+                            <label class="fieldset-label">Number</label>
+                            <input value="01944444444" id="acount-number" type="number" maxlength="11" class="input" placeholder="Account number" required/>
+                            <label class="fieldset-label">Amount</label>
+                            <input  id="cash-out-amount" type="number" class="input" placeholder="type your amount" required/>
+                            <label class="fieldset-label">PIN</label>
+                            <input value="1234" id="cash-out-pin" type="number" class="input" placeholder="PIN Number" required/>
+                            <div><a class="link link-hover">Forgot password?</a></div>
+                            <button id="cash-out-btn" type="submit" class="btn btn-neutral mt-4 hover:bg-green-600">Cash Out</button>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
              </section>
         </header>
     </section>
+    <!-- <script src="./script/rechack.js"></script> -->
   <script src="./script/addMoney.js"></script>
+  <script src="./script/toggle.js"></script>
+  <script src="./script/cashout.js"></script>
 </body>
 </html>
